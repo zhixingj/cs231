@@ -1,0 +1,8 @@
+1. ifconfig |grep inet. For wireless connection, ipconfig getifaddr en0; for ethernet, ipconfig getifaddr en1.
+2. host <yourhostname>
+3. nslookup <ipaddress>
+4. scp <file path on Kali> <username>@<ip of the other machine>:<path to destination>
+5. sudo lsof -nP -iTCP:<port number> -sTCP:LISTEN -i@<ip address>
+6. sudo lsof -nP -sTCP:LISTEN -i@<ip address>
+7. curl "<website address>" >> <path to destination file>
+8. curl -I <webpage address>
