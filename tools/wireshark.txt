@@ -1,0 +1,24 @@
+Zhixing Jiang and Avery Watts
+===== DAYTIME =====
+1. 3	0.000180128	10.0.2.15	129.6.15.28	TCP	74	33014 → 13 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 SACK_PERM=1 TSval=4047764867 TSecr=0 WS=128
+   4	0.017703029	129.6.15.28	10.0.2.15	TCP	60	13 → 33014 [SYN, ACK] Seq=0 Ack=1 Win=65535 Len=0 MSS=1460
+   5	0.017735223	10.0.2.15	129.6.15.28	TCP	54	33014 → 13 [ACK] Seq=1 Ack=1 Win=64240 Len=0
+2. 13. The port number of the server tells the client where and which service to send the packet to.
+3. 6	0.034121732	129.6.15.28	10.0.2.15	DAYTIME	105	DAYTIME Response.
+4.  Type: Response
+    Daytime: \n59309 21-04-05 23:49:51 50 0 0 281.6 UTC(NIST) * \n
+5. SYN is Synchronize Sequence Number. It tells the server that client wants to talk and the sequence number it starts segments with.
+6. ACK means acknowledgment. It means the client acknowledges the response from the server and they are ready to communicate.
+7. FIN means finish. It indicates a request for termination of connection
+8. From the server. In the frame with the first FIN, the source IP address is the IP address of the server, and the source port number is 13 (the server's).
+
+===== HTTP =====
+1. 47
+2. Yes. 7	0.075307232	10.0.2.15	45.79.89.123	HTTP	403	GET /index.html HTTP/1.1 
+3. Yes. 11	0.251102847	10.0.2.15	45.79.89.123	HTTP	372	GET /jeff_square_head.jpg HTTP/1.1 
+
+
+===== QUESTIONS =====
+1. Why are these info necessary for computer security?
+2. What is the structure/format of an IP address and what does each part do? 
+3. How are port numbers assigned?
