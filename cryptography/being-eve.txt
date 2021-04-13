@@ -1,0 +1,11 @@
+--------Diffie Hellman-----------
+The secret is 12. We have 17^(R_A) mod 61=46 and 17^(R_B) mod 61 = 5. For each function, find the correct RA and RB with trial and error, and they turned out to be R_A=14, R_B=26.
+The secret is 46^26 mod 61 = 5**14 mod 61 = 12. If the integers are large, I would have a hard time using trial and error to find R_A and R_B.
+
+--------RSA-------------
+The message is: Dear Bob, Check this out.  https://www.schneier.com/blog/archives/2017/12/e-mail_tracking_1.html Yikes! Your friend, Alice.
+I first used a calculator to find the prime factorization of 4661, and it turned out to be p=59 and q=79. So (p-1)(q-1)=4524.
+Then I used trial and error to find a d where 31*d mod 4524=1. It turned out that d=2335.
+For each number n in the message, I do n**2335%4661, and then translate this ascii number into character. Every character together make the decrypted message.
+
+If the integers are large, I may not be able to find the prime factorization of n_B. I also may have trouble finding d_B, which requires a lot of trial and error.
