@@ -1,0 +1,17 @@
+I only dealt with 1-word passwords, because it took way too long to hash two-words passwords
+
+Part 1
+Passwords cracked: 1162
+Total time: 0.48s
+Number of hashes computed: 267751
+Passwords cracked per number of hashes computed: 0.04
+Time per password cracked: 0.0004s
+
+Part 2
+Passwords cracked: 1133
+Total time: 683.65s
+Number of hashes computed: 466192417
+Passwords cracked per number of hashes computed: 0.000002
+Time per password cracked: 0.6s
+
+For part 1, it is possible to use a dictionary to store all the passwords and their hash, so when we are given a hash, we can immediately rectrive the associated password. However, in part 2 the salts make it impossible to calculate possible hashes and store them, because the salts are random. Therefore, when given a hash, we can only try to find hashes of its salt with any possible password and see which one matches.
